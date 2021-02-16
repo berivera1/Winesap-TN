@@ -9,7 +9,7 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Winesap, TN.</tw-noscript></noscript></tw-story>
-<tw-storydata name="Winesap, TN" startnode="1" creator="Twine" creator-version="2.3.12" ifid="E65E0A63-5DBB-4644-9111-1A4897522B7C" zoom="1" format="Harlowe" format-version="3.2.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="donotshowinventory" color="yellow"></tw-tag>,<tw-tag name="footer" color="purple"></tw-tag><tw-passagedata pid="1" name="HomeMenu" tags="donotshowinventory" position="402,101" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X=&quot;)[
+<tw-storydata name="Winesap, TN" startnode="1" creator="Twine" creator-version="2.3.12" ifid="E65E0A63-5DBB-4644-9111-1A4897522B7C" zoom="1" format="Harlowe" format-version="3.2.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="donotshowinventory" color="yellow"></tw-tag>,<tw-tag name="footer" color="purple"></tw-tag><tw-passagedata pid="1" name="HomeMenu" tags="donotshowinventory" position="403,154" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X=&quot;)[
 (text-style:&quot;underline&quot;,&quot;expand&quot;, &quot;buoy&quot;)+(css: &quot;font-size: 200%&quot;)[Winesap, TN]
 
 [[Play|StartingPassage]]
@@ -20,28 +20,28 @@
 
 (live: 8s)[(transition: &quot;dissolve&quot;)[&quot;Ah jeez, not a kid&quot;. After getting stuck in rush-hour traffic on the 76 for over an hour, this was the last thing you needed to start off the day.
 
-Braeburn Smith:
+(text-colour:#b197fc)[Braeburn Smith]:
 16; Winesap, TN
 Found with large chunk taken out of head. Teeth marks indicate apple perpetrator. Noticable bruises on both arms and right leg.
 Foul play considered likely.
 
-Take (link: &quot;crime report&quot;)[(set: $inv to $inv + (a: &quot;Crime Report&quot;))(go-to: &quot;SecondPassage&quot;)].(stop:)]]</tw-passagedata><tw-passagedata pid="3" name="ArtistStatement" tags="donotshowinventory" position="601,99" size="100,100">Winesap, TN is a short murder mystery game where you play as Detective Jonagold as they try and solve the murder of one Braeburn in the small, secluded town of Winesap, Tennassee. It is up to you to uncover the mystery by going around town, interviewing suspects, and finding clues.
+Take (link: &quot;crime report&quot;)[(set: $inv to $inv + (a: &quot;Crime Report&quot;))(go-to: &quot;SecondPassage&quot;)].(stop:)]]</tw-passagedata><tw-passagedata pid="3" name="ArtistStatement" tags="donotshowinventory" position="602,152" size="100,100">Winesap, TN is a short murder mystery game where you play as Detective Jonagold as they try and solve the murder of one Braeburn in the small, secluded town of Winesap, Tennassee. It is up to you to uncover the mystery by going around town, interviewing suspects, and finding clues.
 
 These goals, mystery and interactive immersion, are going to be achieved through what I&#39;m hoping is solid writing and a mechanic that I like to call &quot;Break&quot;. Through interrogating subjects, different pathways add to their &quot;Break&quot; score. Once a character&#39;s Break reaches a certain number, they (as the name implies) break. Depending on what they know, a character&#39;s breaking statement can be anywhere from slightly helpful to massively leading you towards a potential subject. Use these statements alongside clues from the story to find out who the Braeburn&#39;s murderer is and put them behind bars.
 
 The main purpose of this game is to showcase a (hopefully) creative and engaging murder mystery plot. Growing up, I always loved detective shows like Kolchek and Broadchurch, and this is my homage to those shows of my formative years. This is also acting as my introduction to Twine, so a lot of this is going to be rough around the edges as I learn my way through this platform. 
 
 [[Menu|HomeMenu]]
-[[Play|StartingPassage]]</tw-passagedata><tw-passagedata pid="4" name="Footer" tags="footer" position="751,97.5" size="100,100">(if: (passage:)&#39;s name is &quot;inventory&quot;)[&lt;!--Do nothing--&gt;]
+[[Play|StartingPassage]]</tw-passagedata><tw-passagedata pid="4" name="Footer" tags="footer" position="752,150" size="100,100">(if: (passage:)&#39;s name is &quot;inventory&quot;)[&lt;!--Do nothing--&gt;]
 (else-if: (passage:)&#39;s tags contains &quot;donotshowinventory&quot;)[&lt;!--Do nothing--&gt;]
- (else:)[Check [[inventory]].]</tw-passagedata><tw-passagedata pid="5" name="inventory" tags="" position="800,298.5" size="100,100">{
+ (else:)[Check [[inventory]].]</tw-passagedata><tw-passagedata pid="5" name="inventory" tags="" position="800,300" size="100,100">{
 (if: $inv&#39;s length &gt; 0) [You&#39;re currently holding:&lt;br /&gt;(for: each _item, ...$inv)[_item&lt;br /&gt;]]
 (else:) [Your inventory is empty, mate.]
 &lt;br /&gt;
 (click: &quot;Crime Report&quot;)[(display: &quot;CrimeReport&quot;)&lt;br /&gt;&lt;br /&gt;]
 (click: &quot;Car Keys&quot;)[(display: &quot;CarKeys&quot;)&lt;br /&gt;&lt;br /&gt;]
 (click: &quot;Field Supplies&quot;)[(display: &quot;FieldSupplies&quot;)&lt;br /&gt;&lt;br /&gt;]
-}(link-goto: &quot;Return&quot;, (history:)&#39;s last).</tw-passagedata><tw-passagedata pid="6" name="Typewriter" tags="" position="900,97.5" size="100,100">{
+}(link-goto: &quot;Return&quot;, (history:)&#39;s last).</tw-passagedata><tw-passagedata pid="6" name="Typewriter" tags="" position="901,150" size="100,100">{
   &lt;!-- Create a variable to track the position within the $typewriterText string --&gt;
   (set: $typewriterPos to 1)
 
@@ -62,17 +62,17 @@ The main purpose of this game is to showcase a (hopefully) creative and engaging
       (stop:)
     ]
   ]
-}</tw-passagedata><tw-passagedata pid="7" name="SecondPassage" tags="" position="553,300" size="100,100">You sigh to yourself and take a sip from your coffee. Damn office coffee, how do the boys always know how to make something both so perfectly scalding and tasteless at the same time? Well, as you like to say, &quot;no use crying over shit coffee&quot;. It&#39;s time to start getting ready for the the workday.
+}</tw-passagedata><tw-passagedata pid="7" name="SecondPassage" tags="" position="551,298" size="100,100">You sigh to yourself and take a sip from your coffee. Damn office coffee, how do the boys always know how to make something both so perfectly scalding and tasteless at the same time? Well, as you like to say, &quot;no use crying over shit coffee&quot;. It&#39;s time to start getting ready for the the workday.
 
 Check in with [[Commissioner Haralson|HaralsonPassage]].
-Examine your [[Desk|DeskPassage]].</tw-passagedata><tw-passagedata pid="8" name="CrimeReport" tags="" position="926,299.5" size="100,100">Braeburn:
+Examine your [[Desk|DeskPassage]].</tw-passagedata><tw-passagedata pid="8" name="CrimeReport" tags="" position="926,299" size="100,100">(text-colour:#b197fc)[Braeburn Smith]:
 16; Winesap, TN
 Found with large chunk taken out of head. Teeth marks indicate apple perpetrator. Noticable bruises on both arms and right leg.
 Foul play considered likely.</tw-passagedata><tw-passagedata pid="9" name="HaralsonPassage" tags="" position="400,449" size="100,100">{
 (set: $VisitedHaralson to 1)
-}Commissioner Haralson. She&#39;s a great person and an even better detective, but you&#39;re unsure if you&#39;ll be able to handle her energy this morning. You hesitantly enter her office.
+}(text-colour:#e64980)[Commissioner Haralson]. She&#39;s a great person and an even better detective, but you&#39;re unsure if you&#39;ll be able to handle her energy this morning. You hesitantly enter her office.
 
-&quot;Detective Jonagold, it&#39;s so good to see you! How was the commute? Hope traffic wasn&#39;t too bad. Me? Oh yeah I&#39;ve been doing great. Had alfredo with the mister last night. The kids loved it. Yeah, you saw that report on your desk? 16, rural town, no prior convictions or arrests, sounds like he was a pretty good kid. Hey listen, I got a really important meeting with the higher ups in 5, so I&#39;m gonna need you to head out. If you haven&#39;t yet, don&#39;t forget to check in with Private Foxwhelp on the way out for your field supplies. I know you&#39;ll do amazing work on this case, detective. Well, get to it!&quot;.
+&quot;(text-colour:#f59f00)[Detective Jonagold], it&#39;s so good to see you! How was the commute? Hope traffic wasn&#39;t too bad. Me? Oh yeah I&#39;ve been doing great. Had alfredo with the mister last night. The kids loved it. Yeah, you saw that report on your desk? 16, rural town, no prior convictions or arrests, sounds like he was a //pretty good kid//. I wonder, how does a kid like that end up with //bite marks on his face//? Hey listen, I got a really important meeting with the higher ups in 5, so I&#39;m gonna need you to head out. If you haven&#39;t yet, don&#39;t forget to //check in with (text-colour:#8ce99a)[Private Foxwhelp]// on the way out for your field supplies. I know you&#39;ll do amazing work on this case, detective. Well, get to it!&quot;.
 
 Before you can even get a single word out, she shoves you out of her office.
 
@@ -83,23 +83,24 @@ Go back to your [[desk|DeskPassage]].</tw-passagedata><tw-passagedata pid="10" n
 Head [[downstairs|LobbyPassage]].</tw-passagedata><tw-passagedata pid="11" name="CarKeys" tags="" position="1052,299" size="100,100">The keys to your royal blue 1970 Chevy Caprice. </tw-passagedata><tw-passagedata pid="12" name="LobbyPassage" tags="" position="400,601" size="100,100">The lobby of the 46th, a place always booming with life. That is, if life is a collection of dejected old men stuck working desk duty between cases.
 
 {
-(if: not ($inv contains &quot;Field Supplies&quot;))[Foxwhelp walks up to you. &quot;Oh, eventually I&#39;m going to be a tutorial on the &#39;Break&#39; mechanic of this game, but the developer hasn&#39;t programmed that in yet. So for now, feel free to take these (link: &quot;field supplies.\&quot;&quot;)[(set: $inv to $inv + (a: &quot;Field Supplies&quot;))field supplies.&quot;&lt;br /&gt;Field supplies were added to your inventory.]]
+(if: not ($inv contains &quot;Field Supplies&quot;))[(text-colour:#8ce99a)[Foxwhelp] walks up to you. &quot;(text-colour:#f59f00)[Jonagold]! How&#39;s the family? Oh me? Well, eventually I&#39;m going to be a tutorial on the &#39;Break&#39; mechanic of this game, but the developer hasn&#39;t programmed that in yet. So for now, feel free to take these (link: &quot;field supplies.\&quot;&quot;)[(set: $inv to $inv + (a: &quot;Field Supplies&quot;))field supplies.&quot;&lt;br /&gt;Field supplies were added to your inventory.]]
 }
 
 (if: $VisitedHaralson is 0) [Check in with [[Commissioner Haralson|HaralsonPassage]].]
 Go back to your [[desk|DeskPassage]].
 Head out to the [[street|StreetPassage]].</tw-passagedata><tw-passagedata pid="13" name="CarPassage" tags="" position="700,599" size="100,100">As you exit the city, you grow a bit weary. It&#39;s been a while since you&#39;ve had a big case, and you&#39;re not really fond of the American countryside either. &quot;Apples out there are built a bit different&quot;, your mom used to tell you. Maybe it&#39;s just the pre-case nerves.
 
-Slowly, the noise and lights of the city are replaced with trees and eventually you&#39;re surrounded by nothing but the skim road of a two-lane and an enveloping forest. Hours pass by, and all you can think about is the case. &quot;Chewing&quot;. Could it really be, an apple eating another apple? But Winesap doesn&#39;t have any prior cases. No, Winesap doesn&#39;t even have any violent crimes on record. Oh, what could it be?
+Slowly, the noise and lights of the city are replaced with trees and eventually you&#39;re surrounded by nothing but the skim road of a two-lane and an enveloping forest. Hours pass by, and all you can think about is the case. (if: $VisitedHaralson is 1)[&quot;//Bite marks//&quot;. Could it really be, an apple eating another apple? But Winesap doesn&#39;t have any prior cases. No, Winesap doesn&#39;t even have any violent crimes on record. Oh, what could it be? Y](else:)[You don&#39;t know why, but y]ou have a bad feeling about what&#39;s to come.
 
 Keep [[driving|ArrivalPassage]].</tw-passagedata><tw-passagedata pid="14" name="ArrivalPassage" tags="donotshowinventory" position="851,448" size="100,100">(set: $typewriterText to &quot;6:04 PM | Winesap, TN Outskirts&quot;)(display: &quot;Typewriter&quot;)
 
 (live: 6s)[(transition: &quot;dissolve&quot;)[Thanks for playing the demo of Winesap, TN! This is where the story stops for now, but the narrative will continue as it continues to get developed.&lt;br /&gt;&lt;br /&gt;(link: &quot;Play Again&quot;)[(reload:)](stop:)]]</tw-passagedata><tw-passagedata pid="15" name="StreetPassage" tags="" position="549,600" size="100,100">The busy city street, one of your favorite views in the whole world. The sun is out, cars are moving, and people are busy walking every which way. Sitting right in front of the 46th Presinct office is your trusty old Caprice, a car that&#39;s been with you since your early days as a detective.
 
 {
-(if: not ($inv contains &quot;Car Keys&quot;))[You can&#39;t get into your car without the car keys. Hmm, maybe you should check your desk upstairs.]
-(else-if: not ($inv contains &quot;Field Supplies&quot;))[You&#39;re not ready to leave yet, you haven&#39;t gotten your field supplies from Private Foxwhelp.]
-(else-if: not ($VisitedHaralson is 1))[Are you sure you want to leave without checking in with Commissioner Haralson?&lt;br /&gt;Start on the [[drive|CarPassage]].]
+(if: not ($inv contains &quot;Car Keys&quot;) and not ($inv contains &quot;Field Supplies&quot;))[You can&#39;t leave, yet. (text-colour:#8ce99a)[Private Foxwhelp] still has your field supplies. And even if you wanted to, you can&#39;t get into your car without your car keys. Where&#39;d you leave them, maybe in your desk upstairs?]
+(else-if: not ($inv contains &quot;Car Keys&quot;))[You can&#39;t get into your car without the car keys. Hmm, maybe you should check your desk upstairs.]
+(else-if: not ($inv contains &quot;Field Supplies&quot;))[You&#39;re not ready to leave yet, you haven&#39;t gotten your field supplies from (text-colour:#8ce99a)[Private Foxwhelp].]
+(else-if: not ($VisitedHaralson is 1))[Are you sure you want to leave without checking in with (text-colour:#e64980)[Commissioner Haralson]?&lt;br /&gt;Start on the [[drive|CarPassage]].]
 (else:)[Start on the [[drive|CarPassage]].]
 }
 Head back [[inside|LobbyPassage]].</tw-passagedata><tw-passagedata pid="16" name="FieldSupplies" tags="" position="1173,299" size="100,100">Your standard issue field supplies kit. It contains some forms, paper, notepads, pens, pencils, and the like.</tw-passagedata></tw-storydata>
