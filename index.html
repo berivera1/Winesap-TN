@@ -14,25 +14,41 @@
   	padding-left: 1.5rem;
 }
 
-tw-link {
-	color: #b80b33;
-}
-
-tw-link:hover {
-	color: #828282;
-}
-
-audio, embed {
-    position: absolute;
-    z-index: -9999;
-}
-
 ul {
 	margin: 0;
 }
 
 li {
 	margin-top: 1rem;
+}
+
+tw-link {
+	color: #b80b33;
+}
+
+.enchantment-link {
+    color: #b80b33;
+}
+
+.visited {
+	color: #6F0312;
+}
+
+tw-link:hover {
+	color: #828282;
+}
+
+.enchantment-link:hover {
+    color: #828282;
+}
+
+.visited:hover {
+	color: #828282;
+}
+
+audio, embed {
+    position: absolute;
+    z-index: -9999;
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript">// Music
 // ---------------------------------------------------
 window.hq_music = new Audio('http://soundimage.org/wp-content/uploads/2016/06/Spooky-Island.mp3');
@@ -261,7 +277,7 @@ break_success_audio.play();
 &lt;/script&gt;
 }You see a fire in her eyes for a second, but it slowly fades into a downcast sigh.
 
-&quot;Shit, you&#39;re probably right... Guess I&#39;ll have to stick with my traffic duty. Oh, I almost forgot, you&#39;re gonna need (link: &quot;these.\&quot;&quot;)[{&lt;script&gt;get_click_audio.currentTime = 0;get_click_audio.play();&lt;/script&gt;}(set: $inv to $inv + (a: &quot;Field Supplies&quot;))these.&quot;&lt;br /&gt;Field supplies were added to your inventory.&lt;br /&gt;&lt;br /&gt;Damn, she really did try trading away her traffic duty for a murder case. Guess it&#39;s time to head out to the (link: &quot;street&quot;)[{&lt;script&gt; break_music.pause(); hq_music.currentTime = 0; setTimeout(function(){ hq_music.play() }, 1000)&lt;/script&gt;}(go-to: &quot;StreetPassage&quot;)].]</tw-passagedata><tw-passagedata pid="20" name="FoxwhelpBreakPassageLoop" tags="donotshowinventory" position="400,899" size="100,100">{
+&quot;Shit, you&#39;re probably right... Guess I&#39;ll have to stick with my traffic duty. Oh, I almost forgot, you&#39;re gonna need (link: &quot;these.\&quot;&quot;)[{&lt;script&gt;get_click_audio.currentTime = 0;get_click_audio.play();&lt;/script&gt;}(set: $inv to $inv + (a: &quot;Field Supplies&quot;))these.&quot;&lt;br /&gt;Field supplies were added to your inventory.&lt;br /&gt;&lt;br /&gt;Damn, she really did try trading away her traffic duty for a murder case. Guess it&#39;s time to head out to the (link: &quot;street&quot;)[{&lt;script&gt; break_music.pause(); hq_music.currentTime = 0; setTimeout(function(){ hq_music.play() }, 1000)&lt;/script&gt;}(go-to: &quot;StreetPassage&quot;)].]</tw-passagedata><tw-passagedata pid="20" name="FoxwhelpBreakPassageLoop" tags="donotshowinventory" position="549,751" size="100,100">{
 (if: $LastAnswer is not 4)[
 &lt;script&gt;
 break_success_audio.currentTime = 0;
