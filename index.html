@@ -25,6 +25,14 @@ tw-link:hover {
 audio, embed {
     position: absolute;
     z-index: -9999;
+}
+
+ul {
+	margin: 0;
+}
+
+li {
+	margin-top: 1rem;
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript">// Music
 // ---------------------------------------------------
 window.hq_music = new Audio('http://soundimage.org/wp-content/uploads/2016/06/Spooky-Island.mp3');
@@ -35,9 +43,9 @@ window.countryside_music = new Audio('http://soundimage.org/wp-content/uploads/2
 countryside_music.volume = 0.15;
 countryside_music.loop = true;
 
-window.break_music = new Audio('http://soundimage.org/wp-content/uploads/2016/01/The-Darkness-Below_Looping.mp3');
-countryside_music.volume = 0.15;
-countryside_music.loop = true;
+window.break_music = new Audio('http://soundimage.org/wp-content/uploads/2016/04/Analog-Nostalgia.mp3');
+break_music.volume = 0.2;
+break_music.loop = true;
 
 // General Sound Effects
 // ---------------------------------------------------
@@ -56,10 +64,10 @@ get_click_audio.volume = 0.5;
 // Sound Effects for "Break!"
 // ---------------------------------------------------
 window.break_success_audio = new Audio('http://soundimage.org/wp-content/uploads/2016/04/SynthChime2.mp3');
-get_click_audio.volume = 0.25;
+break_success_audio.volume = 0.25;
 
 window.break_fail_audio = new Audio('http://soundimage.org/wp-content/uploads/2016/04/SynthChime1.mp3');
-get_click_audio.volume = 0.25;</script><tw-tag name="donotshowinventory" color="yellow"></tw-tag>,<tw-tag name="footer" color="purple"></tw-tag><tw-passagedata pid="1" name="HomeMenu" tags="donotshowinventory" position="400,151" size="100,100">{
+break_fail_audio.volume = 0.25;</script><tw-tag name="donotshowinventory" color="yellow"></tw-tag>,<tw-tag name="footer" color="purple"></tw-tag><tw-passagedata pid="1" name="HomeMenu" tags="donotshowinventory" position="400,151" size="100,100">{
 &lt;script&gt;
 click_audio.currentTime = 0;
 click_audio.play();
@@ -68,10 +76,10 @@ click_audio.play();
 (text-style:&quot;underline&quot;,&quot;expand&quot;, &quot;fade-in-out&quot;)+(css: &quot;font-size: 200%&quot;)[Winesap, TN]
 
 
+
 [[Play|StartingPassage]]
+
 [[Artist&#39;s Statement|ArtistStatement]]
-
-
 
 
 
@@ -140,7 +148,7 @@ click_audio.play();
       (stop:)
     ]
   ]
-}</tw-passagedata><tw-passagedata pid="7" name="SecondPassage" tags="" position="551,298" size="100,100">{
+}</tw-passagedata><tw-passagedata pid="7" name="SecondPassage" tags="" position="649,299" size="100,100">{
 &lt;script&gt;
 get_click_audio.currentTime = 0;
 get_click_audio.play();
@@ -148,10 +156,11 @@ get_click_audio.play();
 }You sigh to yourself and take a sip from your coffee. Damn office coffee, how do the boys always know how to make something both so perfectly scalding and tasteless at the same time? Well, as you like to say, &quot;no use crying over shit coffee&quot;. It&#39;s time to start getting ready for the the workday.
 
 Check in with [[Commissioner Haralson|HaralsonPassage]].
-Examine your [[Desk|DeskPassage]].</tw-passagedata><tw-passagedata pid="8" name="CrimeReport" tags="" position="926,299" size="100,100">&lt;p&gt;(font:&quot;Garamond&quot;) + (css: &quot;border-left: 2px&quot;)[(text-colour:#b197fc)[Braeburn Smith]:
+Examine your [[Desk|DeskPassage]].
+Head [[downstairs|LobbyPassage]].</tw-passagedata><tw-passagedata pid="8" name="CrimeReport" tags="" position="926,299" size="100,100">&lt;p&gt;(font:&quot;Garamond&quot;) + (css: &quot;border-left: 2px&quot;)[(text-colour:#b197fc)[Braeburn Smith]:
 16; Winesap, TN
 Found with large chunk taken out of head. Teeth marks indicate apple perpetrator. Noticable bruises on both arms and right leg.
-Foul play considered likely.]&lt;/p&gt;</tw-passagedata><tw-passagedata pid="9" name="HaralsonPassage" tags="" position="400,449" size="100,100">{
+Foul play considered likely.]&lt;/p&gt;</tw-passagedata><tw-passagedata pid="9" name="HaralsonPassage" tags="" position="401,449" size="100,100">{
 (set: $VisitedHaralson to 1)
 &lt;script&gt;
 click_audio.currentTime = 0;
@@ -171,7 +180,7 @@ click_audio.play();
 &lt;/script&gt;
 }Ah, your trusty old desk. Some people would call it old and broken, but you like it just how it is. On it are a couple of random papers from old cases, some pens(if: $inv contains &quot;Car Keys&quot;)[, and some pencils](else:)[ and pencils, and your (link: &quot;car keys&quot;)[{&lt;script&gt;get_click_audio.currentTime = 0;get_click_audio.play();&lt;/script&gt;}(set: $inv to $inv + (a: &quot;Car Keys&quot;))car keys.&lt;br /&gt;Car keys were added to your inventory]].
 
-(if: $VisitedHaralson is 0) [Check in with [[Commissioner Haralson|HaralsonPassage]].]
+{(if: $VisitedHaralson is 0) [Check in with [[Commissioner Haralson|HaralsonPassage]].]}
 Head [[downstairs|LobbyPassage]].</tw-passagedata><tw-passagedata pid="11" name="CarKeys" tags="" position="1052,299" size="100,100">The keys to your royal blue 1970 Chevy Caprice. </tw-passagedata><tw-passagedata pid="12" name="LobbyPassage" tags="" position="400,601" size="100,100">{
 &lt;script&gt;
 click_audio.currentTime = 0;
@@ -185,7 +194,7 @@ click_audio.play();
 She looks down to meet your gaze. You notice a slight gleam in her eye.
 &lt;br /&gt;&lt;br /&gt;
 &quot;The thing is, I took a look at that case. And I gotta say, it sounds pretty interesting. It&#39;d also be great to //finally// get out of the city for once. So I was thinking, I just got a pretty cool case too... maybe we could do a little trade. What do you say, wanna help your old partner out?&quot;
-&lt;br /&gt;
+
 Damn, looks like you&#39;ll have to [[convince her|FoxwhelpBreakPassageA]] to give you the field supplies.&lt;br /&gt;]}
 (if: $VisitedHaralson is 0) [Check in with [[Commissioner Haralson|HaralsonPassage]].]
 Go back to your [[desk|DeskPassage]].
@@ -223,7 +232,7 @@ click_audio.play();
 (else-if: not ($VisitedHaralson is 1))[Are you sure you want to leave without checking in with (text-colour:#e64980)[Commissioner Haralson]?&lt;br /&gt;Start on the [[drive|CarPassage]].]
 (else:)[Start on the [[drive|CarPassage]].]
 }
-Head back [[inside|LobbyPassage]].</tw-passagedata><tw-passagedata pid="16" name="FieldSupplies" tags="" position="1173,299" size="100,100">Your standard issue field supplies kit. It contains some forms, paper, notepads, pens, pencils, and the like.</tw-passagedata><tw-passagedata pid="17" name="GarbageHolder" tags="" position="1176,147.5" size="100,100">&#39;&#39;Field Supplies Garbage:&#39;&#39;
+Head back [[inside|LobbyPassage]].</tw-passagedata><tw-passagedata pid="16" name="FieldSupplies" tags="" position="1173,299" size="100,100">Your standard issue field supplies kit. It contains some forms, paper, notepads, pens, pencils, and the like.</tw-passagedata><tw-passagedata pid="17" name="GarbageHolder" tags="" position="1176,147" size="100,100">&#39;&#39;Field Supplies Garbage:&#39;&#39;
 Well, eventually I&#39;m going to be a tutorial on the &#39;Break&#39; mechanic of this game, but the developer hasn&#39;t programmed that in yet. So for now, feel free to take these (link: &quot;field supplies.\&quot;&quot;)[{&lt;script&gt;get_click_audio.currentTime = 0;get_click_audio.play();&lt;/script&gt;}(set: $inv to $inv + (a: &quot;Field Supplies&quot;))field supplies.&quot;&lt;br /&gt;Field supplies were added to your inventory.]</tw-passagedata><tw-passagedata pid="18" name="FoxwhelpBreakPassageA" tags="donotshowinventory" position="401,749" size="100,100">{
 &lt;script&gt;
 hq_music.pause();
@@ -233,16 +242,45 @@ setTimeout(function(){
       break_music.play()
     }, 1000)
 &lt;/script&gt;
-}(set: $FoxwhelpBreak to 0)
-(print: &#39;&lt;progress value=&quot;&#39; + (text: $FoxwhelpBreak) + &#39;&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&#39;)
+}(set: $ans to (a:))(set: $FoxwhelpBreak to 0)(set: $LastAnswer to 1)(set: $TurnsLeft to 4)
+(print: &#39;&lt;progress value=&quot;&#39; + (text: $FoxwhelpBreak) + &#39;&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&#39;) Turns Left: $TurnsLeft
 
 (text-colour:#8ce99a)[Foxwhelp]: &quot;Aha, you&#39;re gonna try and convince me to give up the case? Good luck with that!&quot;
 
 (css: &quot;font-size: 75%;&quot;)[//Welcome to &quot;Break!&quot;. See that meter up top? That shows how close you are to convincing the other person to help you out. Different choices add or subtract to that value, and it&#39;s up to you to reach the character&#39;s breaking point before the end of the conversation. Good luck!//]
 
-{(if: $FoxwhelpBreak &gt; 80)[](else:)[Anyway, even if I wanted to give the case to you, who would you get to take care of lil [[Kanzi|FoxwhelpBreakPassageFinal]] on such short notice?]}</tw-passagedata><tw-passagedata pid="19" name="FoxwhelpBreakPassageFinal" tags="donotshowinventory" position="701,746.5" size="100,100">You see a fire in her eyes for a second, but it slowly fades into a downcast sigh.
+Your Response:
+* You know, Winesap isn&#39;t really known as a new and upcoming (link: &quot;tourist destination&quot;)[(set: $ans to $ans + (a: &quot;1&quot;))(set: $LastAnswer to 1)(set: $FoxwhelpBreak to $FoxwhelpBreak + 50)(go-to: &quot;FoxwhelpBreakPassageLoop&quot;)] by any means.
+* Sorry (text-colour:#8ce99a)[Foxwhelp], but I already (link: &quot;debriefed&quot;)[(set: $ans to $ans + (a: &quot;2&quot;))(set: $LastAnswer to 2)(set: $FoxwhelpBreak to $FoxwhelpBreak + 50)(go-to: &quot;FoxwhelpBreakPassageLoop&quot;)] with the commisioner.
+* You mentioned a (link: &quot;cool case&quot;)[(set: $ans to $ans + (a: &quot;3&quot;))(set: $LastAnswer to 3)(set: $FoxwhelpBreak to $FoxwhelpBreak + 50)(go-to: &quot;FoxwhelpBreakPassageLoop&quot;)] the commissioner put you on, what was it again?
+* You know (text-colour:#8ce99a)[Foxwhelp], I might not be able to convince you, but I think I know someone who can (you pull out a (link: &quot;$20&quot;)[(set: $ans to $ans + (a: &quot;4&quot;))(set: $LastAnswer to 4)(set: $FoxwhelpBreak to $FoxwhelpBreak - 20)(go-to: &quot;FoxwhelpBreakPassageLoop&quot;)]).
+* (text-colour:#8ce99a)[Foxwhelp], I hate to say it but there&#39;s no way you&#39;re gonna (link: &quot;convince&quot;)[(set: $ans to $ans + (a: &quot;5&quot;))(set: $LastAnswer to 5)(set: $FoxwhelpBreak to $FoxwhelpBreak + 50)(go-to: &quot;FoxwhelpBreakPassageLoop&quot;)] me to drop this case.</tw-passagedata><tw-passagedata pid="19" name="FoxwhelpBreakPassageFinal" tags="donotshowinventory" position="701,746" size="100,100">{
+&lt;script&gt;
+break_success_audio.currentTime = 0;
+break_success_audio.play();
+&lt;/script&gt;
+}You see a fire in her eyes for a second, but it slowly fades into a downcast sigh.
 
-&quot;Shit, you&#39;re probably right... Guess traffic duty really is a hard sell when it&#39;s going up against a murder case. Oh I almost forgot, you&#39;re gonna need (link: &quot;these.\&quot;&quot;)[{&lt;script&gt;get_click_audio.currentTime = 0;get_click_audio.play();&lt;/script&gt;}(set: $inv to $inv + (a: &quot;Field Supplies&quot;))these.&quot;&lt;br /&gt;Field supplies were added to your inventory.&lt;br /&gt;&lt;br /&gt;That went pretty well. Head out to the (link: &quot;street&quot;)[{&lt;script&gt; break_music.pause(); hq_music.currentTime = 0; setTimeout(function(){ hq_music.play() }, 1000)&lt;/script&gt;}(go-to: &quot;StreetPassage&quot;)].]</tw-passagedata></tw-storydata>
+&quot;Shit, you&#39;re probably right... Guess I&#39;ll have to stick with my traffic duty. Oh, I almost forgot, you&#39;re gonna need (link: &quot;these.\&quot;&quot;)[{&lt;script&gt;get_click_audio.currentTime = 0;get_click_audio.play();&lt;/script&gt;}(set: $inv to $inv + (a: &quot;Field Supplies&quot;))these.&quot;&lt;br /&gt;Field supplies were added to your inventory.&lt;br /&gt;&lt;br /&gt;Damn, she really did try trading away her traffic duty for a murder case. Guess it&#39;s time to head out to the (link: &quot;street&quot;)[{&lt;script&gt; break_music.pause(); hq_music.currentTime = 0; setTimeout(function(){ hq_music.play() }, 1000)&lt;/script&gt;}(go-to: &quot;StreetPassage&quot;)].]</tw-passagedata><tw-passagedata pid="20" name="FoxwhelpBreakPassageLoop" tags="donotshowinventory" position="400,899" size="100,100">{
+(if: $LastAnswer is not 4)[
+&lt;script&gt;
+break_success_audio.currentTime = 0;
+break_success_audio.play();
+&lt;/script&gt;
+](else:)[
+&lt;script&gt;
+break_fail_audio.currentTime = 0;
+break_fail_audio.play();
+&lt;/script&gt;
+]
+}
+(set: $TurnsLeft to $TurnsLeft - 1)(print: &#39;&lt;progress value=&quot;&#39; + (text: $FoxwhelpBreak) + &#39;&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&#39;) Turns Left: $TurnsLeft
+
+{(text-colour:#8ce99a)[Foxwhelp]: (if: $LastAnswer is 1)[&quot;Mmm, no cozy bed and breakfasts? Whatever, I don&#39;t need comfort, I really just need to get away for a minute.&quot;](else-if: $LastAnswer is 2)[&quot;Hmm, I could probably convince (text-colour:#e64980)[Haralson]... but that sounds like that would require //effort//.&quot;](else-if: $LastAnswer is 3)[&quot;Oh, wouldn&#39;t you like to know. Trust me, it&#39;s undercover ... (she pauses for a second) stopping some coke smugglers.&quot;.](else-if: $LastAnswer is 4)[&quot;Ha, you think you&#39;re gonna get me with $20! (text-colour:#f59f00)[//Jonagold//], I make that much in half an hour.&quot;](else-if: $LastAnswer is 5)[&quot;I guess you&#39;re right, but you didn&#39;t have to put it like that.&quot;]}
+
+Your Response:
+{(if: $FoxwhelpBreak &gt;= 80)[* Anyways, even if I wanted to give the case to you, who would you get to take care of lil [[Kanzi|FoxwhelpBreakPassageFinal]] on such short notice?&lt;br /&gt;]
+(else:)[(if: $ans contains &quot;1&quot;)[](else:)[* You know, Winesap isn&#39;t really known as a new and upcoming (link: &quot;tourist destination&quot;)[(set: $ans to $ans + (a: &quot;1&quot;))(set: $LastAnswer to 1)(set: $FoxwhelpBreak to $FoxwhelpBreak + 50)(go-to: &quot;FoxwhelpBreakPassageLoop&quot;)] by any means.](if: $ans contains &quot;2&quot;)[](else:)[* Sorry (text-colour:#8ce99a)[Foxwhelp], but I already (link: &quot;debriefed&quot;)[(set: $ans to $ans + (a: &quot;2&quot;))(set: $LastAnswer to 2)(set: $FoxwhelpBreak to $FoxwhelpBreak + 50)(go-to: &quot;FoxwhelpBreakPassageLoop&quot;)] with the commisioner.](if: $ans contains &quot;3&quot;)[](else:)[* You mentioned a (link: &quot;cool case&quot;)[(set: $ans to $ans + (a: &quot;3&quot;))(set: $LastAnswer to 3)(set: $FoxwhelpBreak to $FoxwhelpBreak + 50)(go-to: &quot;FoxwhelpBreakPassageLoop&quot;)] the commissioner put you on, what was it again?](if: $ans contains &quot;4&quot;)[](else:)[* You know (text-colour:#8ce99a)[Foxwhelp], I might not be able to convince you, but I think I know someone who can (you pull out a (link: &quot;$20&quot;)[(set: $ans to $ans + (a: &quot;4&quot;))(set: $LastAnswer to 4)(set: $FoxwhelpBreak to $FoxwhelpBreak - 20)(go-to: &quot;FoxwhelpBreakPassageLoop&quot;)]).](if: $ans contains &quot;5&quot;)[](else:)[* (text-colour:#8ce99a)[Foxwhelp], I hate to say it but there&#39;s no way you&#39;re gonna (link: &quot;convince&quot;)[(set: $ans to $ans + (a: &quot;5&quot;))(set: $LastAnswer to 5)(set: $FoxwhelpBreak to $FoxwhelpBreak + 50)(go-to: &quot;FoxwhelpBreakPassageLoop&quot;)] me to drop this case.]]}</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,i=!1,a=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){i=!0,a=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw a}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
